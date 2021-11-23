@@ -1,10 +1,10 @@
 """
-    function animate_beta(x, α, β) 
+    animate_beta(x, α, β) 
 
 This function generates an animation depicting the probability density and the cumulative
     probability functions of the Beta dsitribution, as implemented in Distributions.jl.
 
-```math
+```jldoctest
 x = collect(0.01:0.01:0.99);
 α = collect(0.1:0.2:10);
 β = collect(0.1:0.5:10);
