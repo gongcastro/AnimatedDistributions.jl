@@ -6,9 +6,9 @@ makedocs(
     sitename = "AnimatedDistributions",
     format = Documenter.HTML(),
     modules = [AnimatedDistributions],
-    pages = [
-        "index.md",
-        "animations.md",
+    pages = Any[
+        "Introduction"     => "index.md",
+        "Animations"       => "animations.md",
     ]
 )
 
@@ -17,5 +17,6 @@ makedocs(
 # for more information.
 deploydocs(
     repo = "github.com/gongcastro/AnimatedDistributions.jl",
+    target = "build",
     push_preview=true,
 )
