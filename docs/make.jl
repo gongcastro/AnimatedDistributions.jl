@@ -8,6 +8,7 @@ makedocs(
     modules = [AnimatedDistributions],
     pages = [
         "index.md",
+        "animations.md",
     ]
 )
 
