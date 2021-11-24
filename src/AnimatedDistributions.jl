@@ -2,10 +2,23 @@ module AnimatedDistributions
 
 using Random, Distributions, Plots, GR, ColorSchemes, PlotThemes
 
-export animate_beta # Beta distribution
+export animate_beta,
+    animate_normal,
+    animate_cauchy,
+    animate_weibull,
+    animate_gamma,
+    animate_frechet,
+    animate_rayleigh,
+    animate_invgamma
 
 include("animate_beta.jl")
 include("animate_normal.jl")
+include("animate_gamma.jl")
+include("animate_invgamma.jl")
+include("animate_frechet.jl")
+include("animate_weibull.jl")
+include("animate_rayleigh.jl")
+include("animate_cauchy.jl")
 include("save_animation.jl")
 
 end # module
