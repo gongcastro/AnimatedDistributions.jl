@@ -19,5 +19,5 @@ makedocs(
 # for more information.
 deploydocs(;
     repo = "github.com/gongcastro/AnimatedDistributions.jl.git",
-    target = "build"
+    target = "docs"
 )
