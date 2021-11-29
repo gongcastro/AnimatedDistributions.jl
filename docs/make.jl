@@ -18,6 +18,5 @@ makedocs(
 # See "Hosting Documentation" and deploydocs() in the Documenter manual
 # for more information.
 deploydocs(;
-    repo = "github.com/gongcastro/AnimatedDistributions.jl.git",
-    target = "docs"
+    repo = "github.com/gongcastro/AnimatedDistributions.jl.git"
 )
