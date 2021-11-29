@@ -3,7 +3,7 @@ push!(LOAD_PATH, "../src/")
 using Documenter, AnimatedDistributions
 
 makedocs(
-    sitename = "AnimatedDistributions.jl",
+    sitename = "AnimatedDistributions",
     format = Documenter.HTML(
         prettyurls = get(ENV, "CI", nothing) == "true"
     ),
