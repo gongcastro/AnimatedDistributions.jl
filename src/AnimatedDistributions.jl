@@ -19,6 +19,11 @@ include("animate_frechet.jl")
 include("animate_weibull.jl")
 include("animate_rayleigh.jl")
 include("animate_cauchy.jl")
+include("animate_exponential.jl")
+include("animate_pareto.jl")
+include("animate_tstudent.jl")
+include("animate_triweight.jl")
+include("animate_semicircle.jl")
 include("save_animation.jl")
 
 end # module

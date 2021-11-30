@@ -4,7 +4,7 @@
 This function generates an animation depicting the probability density and the cumulative
     probability functions of the Pareto distribution, as implemented in Distributions.jl.
 
-```jldoctest
+```julia
 x=collect(0:0.01:6);
 α = collect(0.1:0.1:5);
 θ = collect(0.5:0.2:2);

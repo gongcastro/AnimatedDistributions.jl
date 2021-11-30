@@ -4,7 +4,7 @@
 This function generates an animation depicting the probability density and the cumulative
     probability functions of the Cauchy distribution, as implemented in Distributions.jl.
 
-```jldoctest
+```julia
 x = collect(-4:0.01:4);
 μ = collect(-4:1:4);
 σ = collect(1:0.1:8);

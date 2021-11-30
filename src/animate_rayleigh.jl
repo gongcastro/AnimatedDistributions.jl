@@ -4,7 +4,7 @@ animate_rayleigh(x, σ)
 This function generates an animation depicting the probability density and the cumulative
     probability functions of the Rayleigh distribution, as implemented in Distributions.jl.
 
-```jldoctest
+```julia
 x=collect(0:0.01:5);
 σ=collect(0.1:0.1:10);
 animate_rayleigh(x, σ)

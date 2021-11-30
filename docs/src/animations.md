@@ -81,6 +81,7 @@ animate_exponential(x, θ)
 ```
 
 ## Pareto distribution
+
 ```julia
 x=collect(0:0.01:6);
 α = collect(0.1:0.1:5);

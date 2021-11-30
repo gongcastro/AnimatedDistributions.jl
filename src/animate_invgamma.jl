@@ -4,7 +4,7 @@
 This function generates an animation depicting the probability density and the cumulative
     probability functions of the inverse Gamma distribution, as implemented in Distributions.jl.
 
-```jldoctest
+```julia
 x = collect(0.1:0.01:4);
 α = collect(0.1:0.1:5);
 θ = collect(0.5:0.1:2);

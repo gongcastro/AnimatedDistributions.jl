@@ -4,7 +4,7 @@
 This function generates an animation depicting the probability density and the cumulative
     probability functions of the Frechet distribution, as implemented in Distributions.jl.
 
-```jldoctest
+```julia
 x=collect(0:0.01:5);
 α=collect(0.1:0.1:10);
 θ=collect(0.5:0.25:5);
