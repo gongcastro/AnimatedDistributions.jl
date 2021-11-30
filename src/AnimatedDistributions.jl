@@ -9,7 +9,12 @@ export animate_beta,
     animate_gamma,
     animate_frechet,
     animate_rayleigh,
-    animate_invgamma
+    animate_invgamma,
+    animate_exponential,
+    animate_pareto,
+    animate_semicircle,
+    animate_tstudent,
+    animate_triweight
 
 include("animate_beta.jl")
 include("animate_normal.jl")

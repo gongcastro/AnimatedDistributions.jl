@@ -11,6 +11,13 @@ Depth = 3
 
 - Saving animations in .gif format
 
+
+## Functions
+
+```@docs
+animate_tstudent(x, ν)
+```
+
 ## Index
 
 ```@index
