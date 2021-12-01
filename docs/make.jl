@@ -10,7 +10,20 @@ makedocs(
     modules = [AnimatedDistributions],
     pages = [
        "index.md",
-        "animations.md",
+       "animations.md",
+       "animate_beta.md",
+       "animate_normal.md",
+       "animate_cauchy.md",
+       "animate_tstudent.md",
+       "animate_exponential.md",
+       "animate_frechet.md",
+       "animate_gamma.md",
+       "animate_invgamma.md",
+       "animate_weibull.md",
+       "animate_semicircle.md",
+       "animate_rayleigh.md",
+       "animate_pareto.md",
+       "animate_triweight.md",
     ]
 )
 
