@@ -11,7 +11,6 @@ Depth = 3
 
 - Saving animations in .gif format
 
-
 ## Functions
 
 ```@docs

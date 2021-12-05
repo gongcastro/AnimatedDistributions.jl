@@ -14,7 +14,7 @@ animate_beta(x, α, β)
 """
 
 
-function animate_beta(x, α, β) 
+function animate_beta(x, α, β, path = nothing) 
 
     y = zeros(length(x), length(α), length(β), 2);
 
@@ -24,34 +24,35 @@ function animate_beta(x, α, β)
     end
 
     ## animation
-    theme(:vibrant)
     indices = vcat(1:length(α), reverse(1:length(α)));
-    
+
     anim = Animation()
     
+    println("Generating animation...")
     for i=indices
-        p1 = plot(
+        p1 = Plots.plot(
             x, y[:, i, :, 1],
             legend=false,
-            lw=3, ylims=(0, 6), palette=:RdYlBu_10,
+            lw=3, ylims=(0, 6),
             xlabel="Sampling space", ylabel="Density",
             title="Beta(α, β) - Probability density"
         )
-        annotate!(median(x), 6-6/4, text(string.("α = ", α[i]), :black, :center, 12))
+        annotate!(median(x), 6-6/4, Plots.text(string.("α = ", α[i]), :black, :center, 12))
     
-        p2 = plot(
+        p2 = Plots.plot(
             x, y[:, i, :, 2],
             legend=:outertopright, label = β', legendtitle="β",
-            lw=3, ylims=(0, 1), palette=:RdYlBu_10,
+            lw=3, ylims=(0, 1),
             xlabel="Sampling space", ylabel="Probability",
             title="Beta(α, β) - Cumulative distribution"
         )
 
-        plt = plot(p1, p2, size=(1000, 500))
+        plt = Plots.plot(p1, p2, size=(1000, 500))
         
         frame(anim, plt)
     end
 
-    return(anim)
+    println("Saving GIF...")
+    gif(anim, path)
 
 end

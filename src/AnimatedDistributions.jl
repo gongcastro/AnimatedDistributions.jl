@@ -1,6 +1,6 @@
 module AnimatedDistributions
 
-using Random, Distributions, Plots, GR, ColorSchemes, PlotThemes
+using Random, Distributions, Plots, GR
 
 export animate_beta,
     animate_normal,

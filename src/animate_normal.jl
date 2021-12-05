@@ -14,7 +14,7 @@ animate_normal(x, μ, σ)
 """
 
 
-function animate_normal(x, μ, σ) 
+function animate_normal(x, μ, σ, path = nothing) 
 
     y = zeros(length(x), length(μ), length(σ), 2);
 
@@ -24,34 +24,34 @@ function animate_normal(x, μ, σ)
     end
 
     ## animation
-    theme(:vibrant)
     indices = vcat(1:length(μ), reverse(1:length(μ)));
     
     anim = Animation()
     
     for i=indices
-        p1 = plot(
+        p1 = Plots.plot(
             x, y[:, i, :, 1],
             legend=false,
-            lw=3, ylims=(0, 6), palette=:RdYlBu_10,
+            lw=3, ylims=(0, 6),
             xlabel="Sampling space", ylabel="Density",
             title="Normal(μ, σ) - Probability density"
         )
-        annotate!(median(x), 6-6/4, text(string.("μ = ", μ[i]), :black, :center, 12))
+        annotate!(median(x), 6-6/4, Plots.text(string.("μ = ", μ[i]), :black, :center, 12))
     
-        p2 = plot(
+        p2 = Plots.plot(
             x, y[:, i, :, 2],
             legend=:outertopright, label = σ', legendtitle="σ",
-            lw=3, ylims=(0, 1), palette=:RdYlBu_10,
+            lw=3, ylims=(0, 1),
             xlabel="Sampling space", ylabel="Probability",
             title="Normal(μ, σ) - Cumulative distribution"
         )
 
-        plt = plot(p1, p2, size=(1000, 500))
+        plt = Plots.plot(p1, p2, size=(1000, 500))
         
         frame(anim, plt)
     end
 
-    return(anim)
+    println("Saving GIF...")
+    gif(anim, path)
 
 end
